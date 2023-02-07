@@ -19,6 +19,7 @@ func main() {
         fmt.Fprintf(w, "Hello, World!")
     })
     println(port)
+    log.Println("listening on", port)
     err := http.ListenAndServe(":"+port, r)
     if err != nil {
     log.Fatal("ListenAndServe: ", err)
